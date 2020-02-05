@@ -38,6 +38,26 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'tab4',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../tab4/tab4.module').then(m => m.Tab4PageModule)
+          }
+        ]
+      },
+      {
+        path: 'programme-detail',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../programme-detail/programme-detail.module').then(m => m.ProgrammeDetailPageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
